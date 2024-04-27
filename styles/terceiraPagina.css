@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes animate-title {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes animateMain {
+    from {
+        transform: translateY(120px); opacity: 0;
+    }
+    to {
+        transform: translateY(0); opacity: 1;
+    }
+}
+
+
+#cabecalho-titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 24px;
+    background-color: transparent;
+    padding-top: 10px;
+    height: 40px;
+    transition: 0.2s;
+    animation: animate-title 0.5s ease-in-out;
+}
+
+#cabecalho-titulo:hover {
+    background-color: black;
+    color: white;
+}
+
+.main-conteudo {
+    font-size: 18px;
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 20px;
+    animation: animate-title 0.5s ease-in-out, animateMain 1.2s ease-out;
+}
+
+.exemplos {
+    width: 360px;
+    height: 500px;
+}
+
+.secao-exemplos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 10px;
+    animation: animate-title 0.5s ease-in-out, animateMain 1.2s ease-out;
+}
+
+.botao {
+    color: white;
+    margin-left: 680px;
+    margin-top: 50px;
+    background-color: black;
+    border-style: none;
+    border-radius: 30px;
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+}
+
+.footer-descricao {
+    color: black;
+}
+
+#footer-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+
+footer {
+    margin-top: 30px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    column-gap: 15px;
+    height: 50px;
+    transition: 0.2s;
+}
+
+footer:hover {
+    background-color: black;
+}
+
+footer:hover .footer-descricao {
+    color: white;
+}
+
+footer:hover #footer-icon {
+    filter: invert();
+}

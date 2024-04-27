@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes animateMain {
+    from {
+        transform: translateY(120px); opacity: 0;
+    }
+    to {
+        transform: translateY(0); opacity: 1;
+    }
+}
+
+@keyframes animate-title {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+body {
+    background-image: url("../Assets/designer-working-3d-model.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: transparent;
+    transition: 0.2s;
+}
+
+.header-section .header-title {    
+    font-size: 24px;
+    /*
+        Não consegui alinhar usando o flexbox. Minha ideia seria colocar o título no centro
+        mas nenhuma das opções que eu tentei com o flexbox me permitiu alinhar o título da
+        maneira esperada.
+        Por isso, coloquei uma margem esquerda de 355px.
+        Vou pensar em formas melhores de fazer isso posteriormente.
+    */
+    margin-left: 355px;
+    color: white;
+    animation: animate-title 0.5s ease-in-out;
+}
+
+.header-info {
+    color: white;
+    animation: animate-title 0.5s ease-in-out;
+}
+
+.icon {
+    filter: invert();
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 60px;
+    animation: animate-title 0.5s ease-in-out;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 15px;
+}
+
+header:hover {
+    background-color: white;
+}
+
+header:hover .header-title {
+    color: #3A3A3A;
+}
+
+header:hover .icon {
+    filter: none;
+}
+
+header:hover .header-info {
+    color: black;
+}
+
+main {
+    line-height: 50px;
+    margin-top: 240px;
+    color:white;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 22px;
+    animation: animateMain 1.2s ease-out
+}
+
+.main-subtitle {
+    font-size: 30px;
+    animation: animateMain 1.7s ease-out
+}
+
+.botao {
+    margin-top: 30px;
+    background-color: white;
+    border-style: none;
+    font-size: 15px;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    animation: animateMain 2s ease-out
+}
